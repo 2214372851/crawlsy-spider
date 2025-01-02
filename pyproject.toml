@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "crawlsy-spider"
+version = "0.1.0"
+description = ""
+authors = ["YUNHAI <bybxbwg@foxmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+rq = "^2.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+crawlsy-spider = "crawlsy_spider.cli:cli"
