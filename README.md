@@ -4,7 +4,7 @@
 CrawLsy-Spider 是一个基于 Redis 和 RQ 的爬虫任务管理系统，旨在简化爬虫任务的提交和管理。
 
 ## 安装
-1. 确保已安装 Python 3.12 或更高版本。
+1. 确保已安装 Python 3.9 或更高版本。
 2. 安装依赖库：
 ```bash
 pip install crawlsy-spider
@@ -48,3 +48,13 @@ python worker.py
 ```shell
 python producer.py
 ```
+
+## 开源协议
+
+[GNU General Public License v2.0](LICENSE)
+
+Crawlsy 是自由软件，您可以根据自由软件基金会发布的 GNU 通用公共许可证（版本 2）的条款重新分发或修改它。
+
+发布此程序是希望它有用，但不提供任何保证；甚至没有对适销性或特定用途适用性的暗示保证。有关更多详细信息，请参阅 GNU 通用公共许可证。
+
+您应该已经收到了 GNU 通用公共许可证的副本；如果没有，请参阅 <http://www.gnu.org/licenses/>。
