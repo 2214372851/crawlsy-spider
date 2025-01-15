@@ -59,7 +59,7 @@ class CrawLsy:
         return self._queue.enqueue(
             func,
             *args,
-            timeout=timeout,
+            job_timeout=timeout,
             ttl=ttl,
             result_ttl=result_ttl,
             retry=retry

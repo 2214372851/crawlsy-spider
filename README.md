@@ -38,7 +38,7 @@ with CrawLsy("tests", is_async=True) as craw:
 
 ### 工作节点部署
 ```shell
-python worker.py
+python consumers.py
 ```
 
 ### 运行生产节点
