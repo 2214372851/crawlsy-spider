@@ -1,1 +1,1 @@
-from crawlsy_spider.craw import CrawLsy
+from crawlsy_spider.scheduler import CrawLsy

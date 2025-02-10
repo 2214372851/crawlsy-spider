@@ -1,7 +1,7 @@
 # CrawLsy-Spider
 
 ## 简介
-CrawLsy-Spider 是一个基于 Redis 和 RQ 的爬虫任务管理系统，旨在简化爬虫任务的提交和管理。
+CrawLsy-Spider 是一个基于 Redis 的分布式任务系统，旨在极度简化任务的提交和管理。
 
 ## 安装
 1. 确保已安装 Python 3.9 或更高版本。
@@ -11,11 +11,6 @@ pip install crawlsy-spider
 ```
 
 ## 使用方法
-
-### 初始化项目
-```shell
-crawlsy-spider new myproject
-```
 
 ### 在 `task.py` 中编写任务逻辑
 
@@ -28,12 +23,17 @@ def task_func(url):
 
 ### 在 `produce.py` 提交任务
 ```python
-from crawlsy_spider.craw import CrawLsy
+from crawlsy_spider import CrawLsy
 
 from task import task_func  # 导入test函数
 
-with CrawLsy("tests", is_async=True) as craw:
-    result = craw.submit(task_func, 'https://baidu.com')
+with CrawLsy(
+        name="test",
+        host="127.0.0.1",
+        db=0,
+        password="test",
+    ) as craw:
+    job_id = craw.put(task_func, 'https://baidu.com')
 ```
 
 ### 工作节点部署
